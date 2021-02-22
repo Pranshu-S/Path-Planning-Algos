@@ -27,19 +27,19 @@ class env:
             obs.add((x - 1, i))
 
         for i in numpy.arange(0,7,0.3):
-            obs.add((round(i),round(35-5*i)))
+            obs.add((i,35-5*i))
 
         for i in range(7,45):
-            obs.add((i,round(0.1315*i - 0.921)))
+            obs.add((i,0.1315*i - 0.921))
 
         for i in numpy.arange(45,49,0.2):
-            obs.add((round(i),round(8*i - 355)))
+            obs.add((i,8*i - 355))
 
         for i in range(25,49):
-            obs.add((i,round(-0.2*i +54)))
+            obs.add((i,-0.2*i +54))
 
         for i in range(0,25):
-            obs.add((i,round(0.6*i+34)))
+            obs.add((i,0.6*i+34))
 
         for i in range(20,35):
             obs.add((i,15))
@@ -47,6 +47,8 @@ class env:
 
         for i in range(15,30):
             obs.add((35,i))
+        
+        obs.add((35,30))
 
 
 
