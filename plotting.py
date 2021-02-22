@@ -32,6 +32,12 @@ class Plotting:
         ax.xaxis.grid(True,'major',linewidth=2)
         ax.yaxis.grid(True,'major',linewidth=2)
         plt.show()
+    
+    def ret_map(self):
+        return self.obs
+
+    def ret_range(self):
+        return self.env.x_range, self.env.y_range
 
     @staticmethod
     def color_list():
