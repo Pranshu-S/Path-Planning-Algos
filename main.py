@@ -28,16 +28,30 @@ def get_matrix(obstacles):
 
     return node_adj,sub_node_adj
 
+def get_visited(start, node_matrix,sub_node_matrix):
+    visit = []
+    visit.append(start)
+
+    
+    return visit
+
 
 def main():
-    plot = plotting.Plotting()
-    # plot.plot_grid("Map")
+    start = [12.5,7.5]
+    plot = plotting.Plotting(start)
+    plot.plot_grid("Map")
 
 
     # adj_matrix_node, adj_matrix_sub_node = get_matrix(plot.ret_map(),plot.ret_range())
     node_matrix, sub_node_matrix = get_matrix(plot.ret_map())
     print(node_matrix)
     print(sub_node_matrix)
+
+    visited = get_visited(start, node_matrix, sub_node_matrix)
+    print(visited)
+    # visited = [[2,3],[2,4],[2,5]]
+    # print(visited)
+    plot.animation(visited,"Map")
 
 if __name__ == '__main__':
     main()
